@@ -11,42 +11,7 @@ These three files can be accessed in folders EmployeeSQL >> Data Modeling, Schem
 
 ### Data Modeling
 
-Through the use of https://www.quickdatabasediagrams.com/ - a diagram was created showing the relationships of the CSV files that were provided in the DATA folder in EmployeeSQL folder. The following code was used in the creation of this diagram, which showcases the different CSV files and their relationships to each other through the use of Primary and Foreign keys:
-
-DEPARTMENTS
-dept_no PK INT
-dept_name VARCHAR(20)
-
-
-DEPT_EMP
-emp_no PK INT FK - EMPLOYEES.emp_no
-dept_no PK INT FK - DEPARTMENTS.dept_no
-
-
-DEPT_MANAGER
-dept_no PK INT FK - DEPARTMENTS.dept_no
-emp_no PK INT FK - EMPLOYEES.emp_no
-
-
-EMPLOYEES
-emp_no PK INT
-emp_title_id VARCHAR(10) FK - TITLES.title_id
-birthdate INT
-first_name VARCHAR(20)
-last_name VARCHAR(20)
-sex VARCHAR(5)
-hire_date INT
-
-
-SALARIES
-emp_no PK INT FK - EMPLOYEES.emp_no
-salary INT
-
-
-TITLES
-title_id PK INT
-title VARCHAR(15)
-
+Through the use of https://www.quickdatabasediagrams.com/ - a diagram was created showing the relationships of the CSV files that were provided in the DATA folder in EmployeeSQL folder. The code used in the creation of this diagram showcases the different CSV files and their relationships to each other through the use of Primary and Foreign keys.
 
 #### Data Engineering
 
