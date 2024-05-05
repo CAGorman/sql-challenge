@@ -13,11 +13,11 @@ These three files can be accessed in folders EmployeeSQL >> Data Modeling, Schem
 
 Through the use of https://www.quickdatabasediagrams.com/ - a diagram was created showing the relationships of the CSV files that were provided in the DATA folder in EmployeeSQL folder. The code used in the creation of this diagram showcases the different CSV files and their relationships to each other through the use of Primary and Foreign keys.
 
-#### Data Engineering
+### Data Engineering
 
 In this section, The code from QuickDB was exported to PGAdmin4. Once in PGAdmin4- the code was edited to proper SQL language so as to create a table for each one shown in the diagram from the previous section. You will find these tables located the sql file "Employees_Schema.sql"
 
-##### Data Analysis
+### Data Analysis
 
 In the third and final section of this project- the tables created in the previous section were to used to answer several analysis questions. The answers (in the form of new tables) were constructed by referencing, filtering, and joining parts of the Employees_Schema tables through use of SQL coding. The analysis questions answered in this section are found in the file "Employees_Analysis.sql". The questions answered in this section:
 
