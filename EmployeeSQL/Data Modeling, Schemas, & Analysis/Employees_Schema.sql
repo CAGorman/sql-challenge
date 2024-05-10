@@ -1,7 +1,7 @@
 -- Create TITLES table
 CREATE TABLE TITLES (
-    title_id VARCHAR   PRIMARY KEY,
-    title VARCHAR   NOT NULL
+    title_id VARCHAR (6)  PRIMARY KEY,
+    title VARCHAR (15)  NOT NULL
 );
 
 --View TITLES table
@@ -12,12 +12,12 @@ SELECT * from TITLES;
 -- Create EMPLOYEES table
 CREATE TABLE EMPLOYEES (
     emp_no INT   PRIMARY KEY,
-    emp_title_id VARCHAR   NOT NULL,
+    emp_title_id VARCHAR (6)  NOT NULL,
 		FOREIGN KEY(emp_title_id) REFERENCES TITLES (title_id),
     birth_date DATE   NOT NULL,
-    first_name VARCHAR   NOT NULL,
-    last_name VARCHAR   NOT NULL,
-    sex VARCHAR   NOT NULL,
+    first_name VARCHAR (15)  NOT NULL,
+    last_name VARCHAR (15)  NOT NULL,
+    sex VARCHAR (3)  NOT NULL,
     hire_date DATE   NOT NULL
 );
 
@@ -53,7 +53,7 @@ SELECT * from DEPARTMENTS;
 -- Create DEPT_EMP table
 CREATE TABLE DEPT_EMP (
     emp_no INT,
-    dept_no VARCHAR,
+    dept_no VARCHAR (6),
 	PRIMARY KEY(emp_no, dept_no),
 	FOREIGN KEY(emp_no) REFERENCES EMPLOYEES (emp_no),
 	FOREIGN KEY(dept_no) REFERENCES DEPARTMENTS (dept_no)
@@ -66,7 +66,7 @@ SELECT * from DEPT_EMP;
 
 -- Create DEPT_MANAGER table
 CREATE TABLE DEPT_MANAGER (
-    dept_no VARCHAR,
+    dept_no VARCHAR (6),
     emp_no INT,
 	PRIMARY KEY(emp_no, dept_no),
 	FOREIGN KEY(dept_no) REFERENCES DEPARTMENTS (dept_no),
